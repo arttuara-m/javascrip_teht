@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target"></p>
+  <script>
+    'use strict'
+
+    const dicenum = parseInt(prompt("Input number of dice."))
+    const desiredsum = parseInt(prompt("Input the sum of that you are interested about"))
+    let sum = 0
+
+
+    for (let i = 1; i <= 10000; i++) {
+      let number = 0
+      for (let ii = 1; ii <= dicenum; ii++) {
+        number += Math.floor(Math.random() * 6 + 1)
+      }
+      if (number === desiredsum) {
+        sum += 1
+      }
+    }
+
+    let endprosent = sum / 10000 * 100
+    endprosent = Number.parseFloat(endprosent).toFixed(2)
+
+    document.querySelector("#target").innerHTML =
+        "Probability to get sum " + String(desiredsum) + " with "
+        + String(dicenum) + " dice is " + String(endprosent) + "%"
+  </script>
+</body>
+</html>

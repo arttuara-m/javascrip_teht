@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+  'use strict';
+
+  const number = parseInt(prompt('Input possible prime'));
+  let is_prime = true;
+
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      is_prime = false;
+      break;
+    }
+  }
+  if (is_prime) {
+    document.querySelector('#target').innerHTML = 'number is prime';
+  } else {
+    document.querySelector('#target').innerHTML = 'number is not prime';
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target1"></p>
+<p id="target2"></p>
+<p id="target3"></p>
+<script>
+  'use strict';
+
+  let num1 = parseInt(prompt('Gimmi a number!'));
+  let num2 = parseInt(prompt('Gimmi a second number!'));
+  let num3 = parseInt(prompt('Gimmi one more number!'));
+
+  document.querySelector('#target1').innerHTML = num1 + num2 + num3;
+  document.querySelector('#target2').innerHTML = num1 * num2 * num3;
+  document.querySelector('#target3').innerHTML = (num1 + num2 + num3) / 3;
+</script>
+</body>
+</html>

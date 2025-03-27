@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+  'use strict';
+
+  let name = prompt('Your name?');
+  const numero = Math.floor(Math.random() * 4);
+
+  switch (numero) {
+    case 0:
+      document.querySelector('#target').innerHTML = name + ', you are Gryffindor.';
+      break;
+    case 1:
+      document.querySelector('#target').innerHTML = name + ', you are Slytherin.';
+      break;
+    case 2:
+      document.querySelector('#target').innerHTML = name + ', you are Hufflepuff.';
+      break;
+    case 3:
+      document.querySelector('#target').innerHTML = name + ', you are Ravenclaw.';
+      break;
+  }
+
+</script>
+</body>
+</html>

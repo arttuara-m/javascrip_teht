@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+  'use strict';
+
+  let target = parseInt(prompt('How many times shall I roll dice?'));
+
+  let numlist = [];
+  for (let i = 0; i < target; i++) {
+    numlist.push(String(Math.floor(Math.random() * 6 + 1)));
+  }
+  document.querySelector('#target').innerHTML = numlist.join(' ');
+</script>
+</body>
+</html>

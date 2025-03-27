@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+  'use strict';
+
+  let docalc = confirm('Should I calculate the square root?');
+
+  if (docalc) {
+    let number = parseInt(prompt('Imput desired number.'));
+    if (number < 0) {
+      document.querySelector('#target').innerHTML = 'The square root of a negative number is not defined';
+    } else {
+      document.querySelector('#target').innerHTML = 'The square root is ' + Math.sqrt(number) + '.';
+    }
+  } else {
+    document.querySelector('#target').innerHTML = ' The square root is not calculated.';
+  }
+
+</script>
+</body>
+</html>

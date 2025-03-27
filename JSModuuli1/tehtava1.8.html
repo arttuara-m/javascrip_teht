@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target"></p>
+<script>
+  'use strict';
+
+  const start_year = parseInt(prompt('Input start year'));
+  const end_year = parseInt(prompt('Input end year'));
+  let leap_year_list = [];
+
+  for (let year = start_year; year < end_year; year++) {
+    if (year % 400 === 0) {
+      leap_year_list.push(String(year))
+    } else if (year % 100 === 0) {
+      //pass
+    } else if (year % 4 === 0) {
+      leap_year_list.push(String(year))
+    } else {
+      //pass
+    }
+  }
+  document.querySelector('#target').innerHTML = leap_year_list.join("<br>")
+</script>
+</body>
+</html>

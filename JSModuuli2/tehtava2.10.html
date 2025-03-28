@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        const numberofcand = parseInt(prompt("Input the number of candidates"))
+        const listofcand = []
+
+        for (let i = 1; i <= numberofcand; i++) {
+          listofcand.push({name: prompt("Name for candidate " + i), votes: 0,})
+        }
+
+        const numofvoters = parseInt(prompt("Input the number of voters"))
+        for (let i = 1; i <= numofvoters; i++) {
+          const name = prompt("Who do you vote?")
+          if (name === "") {
+            continue
+          }
+          for (let candidate of listofcand) {
+            if (candidate.name === name) {
+              candidate.votes += 1
+            }
+          }
+        }
+        listofcand.sort((a, b) => {return b - a;});
+
+        console.log("The winner is "+listofcand[0].name+" with "+listofcand[0].votes+" votes.")
+        console.log("results:")
+        for (let cand of listofcand) {
+          console.log(cand.name+": "+cand.votes+" votes")
+        }
+    </script>
+</body>
+</html>

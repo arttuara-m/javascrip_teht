@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    'use strict'
+    function even(listofnumbers) {
+      const listofevens = []
+      for (let i in listofnumbers) {
+        if (listofnumbers[i] % 2 === 0) {
+          listofevens.push(listofnumbers[i])
+        }
+      }
+      return listofevens
+    }
+    const listofnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 27, 33, 42, 64, 80, 99, 100]
+    const listofevens = even(listofnumbers)
+
+    console.log(listofnumbers)
+    console.log(listofevens)
+  </script>
+</body>
+</html>

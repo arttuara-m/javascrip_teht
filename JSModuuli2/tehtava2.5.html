@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        const numlist = []
+
+        while (true) {
+          let number = parseInt(prompt("Input desired number"))
+          if (numlist.includes(number)) {
+            alert("Number already inputed!")
+            break
+          }
+          numlist.push(number)
+        }
+        numlist.sort()
+        console.log(numlist)
+    </script>
+</body>
+</html>

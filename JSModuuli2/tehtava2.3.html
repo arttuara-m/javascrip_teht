@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id ="dogs"></ul>
+    <script>
+        'use strict'
+
+        const dogs = []
+        for (let i = 1; i <= 6; i++) {
+          dogs.push(prompt("Input desired dog " + i))
+        }
+        dogs.sort((a, b) => a.localeCompare(b))
+        dogs.reverse()
+
+        let unsorteddogs = ""
+        for (let i = 0; i < 6; i++) {
+          unsorteddogs += "<ul>" + dogs[i] + "</ul>"
+        }
+        document.querySelector("#dogs").innerHTML = unsorteddogs
+    </script>
+</body>
+</html>

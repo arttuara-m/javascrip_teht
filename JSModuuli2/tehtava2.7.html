@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id ="dicethrows"></ul>
+    <script>
+        'use strict'
+        function randice(sidesofdie) {
+          return Math.floor(Math.random() * sidesofdie+1)
+        }
+
+        let number = 0
+        const numlist = []
+        const numofsides = parseInt(prompt("Please, input number of sides for the die."))
+        do {
+          number = randice(numofsides)
+          numlist.push(number)
+        } while (number != numofsides)
+
+        let printlist = ""
+
+        for (let numb in numlist) {
+          printlist += "<ul>" + numlist[numb] + "</ul>"
+        }
+        document.querySelector('#dicethrows').innerHTML = printlist
+
+    </script>
+</body>
+</html>

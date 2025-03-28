@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    'use strict'
+
+    const numbers = []
+    for (let i = 1; i <= 5; i++) {
+      numbers.push(prompt("Input number" + i))
+    }
+    for (let i = numbers.length; i > 0; i--) {
+      console.log(numbers[i-1])
+    }
+  </script>
+</body>
+</html>

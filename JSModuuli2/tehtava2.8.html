@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="names"></p>
+  <script>
+    'use strict'
+    function concat(listofnames) {
+      let stringofnames = ""
+      for (let i in listofnames) {
+        stringofnames += listofnames[i]
+      }
+      return stringofnames
+    }
+
+    const names = ["Mark", "Sean", "Dean", "Bean", "James", "Ace", "Mika"]
+    document.querySelector('#names').innerHTML = concat(names)
+  </script>
+</body>
+</html>

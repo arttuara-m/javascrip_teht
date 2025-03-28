@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id ="dicethrows"></ul>
+    <script>
+        'use strict'
+        function randice() {
+          return Math.floor(Math.random() * 6+1)
+        }
+
+        let number = 0
+        const numlist = []
+        do {
+          number = randice()
+          numlist.push(number)
+        } while (number != 6)
+
+        let printlist = ""
+
+        for (let numb in numlist) {
+          printlist += "<ul>" + numlist[numb] + "</ul>"
+        }
+        document.querySelector('#dicethrows').innerHTML = printlist
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol id="particip">
+</ol>
+ <script>
+     'use strict'
+     const amount = parseInt(prompt("Input the amount of participants"))
+     const participants = []
+     for (let i = 0; i < amount; i++) {
+       participants[i] = prompt("Input participant "+(i+1))
+     }
+     let ordpart = ""
+     for (let i = 0; i < amount; i++) {
+       ordpart += "<li>" + participants[i] + "</li>"
+     }
+
+     document.querySelector("#particip").innerHTML = ordpart
+ </script>
+</body>
+</html>
